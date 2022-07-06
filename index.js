@@ -4,7 +4,6 @@ const cssInjectorText = `
 function injectStyle(css) {
   if (!css || typeof document === 'undefined') return
 
-  // TODO make this work inside a WC
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
