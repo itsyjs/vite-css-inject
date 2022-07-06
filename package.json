@@ -1,11 +1,15 @@
 {
   "name": "@itsy/vite-css-inject",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "inject CSS into a Vite build",
   "main": "index.js",
   "type": "module",
   "scripts": {},
-  "keywords": ["vitejs", "css", "inject"],
+  "keywords": [
+    "vitejs",
+    "css",
+    "inject"
+  ],
   "author": "Dave Honneffer",
   "license": "MIT"
 }
