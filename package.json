@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "inject CSS into a Vite build",
   "main": "index.js",
-  "scripts": {
-  },
+  "type": "module",
+  "scripts": {},
   "keywords": ["vitejs", "css", "inject"],
   "author": "Dave Honneffer",
   "license": "MIT"
