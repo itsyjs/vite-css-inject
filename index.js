@@ -4,6 +4,7 @@ const cssInjectorText = `
 function injectStyle(css) {
   if (!css || typeof document === 'undefined') return
 
+  // TODO make this work inside a WC
   const head = document.head
   const style = document.createElement('style')
   head.appendChild(style)
@@ -22,7 +23,7 @@ export default () => {
       // store the CSS for later in the renderChunk hook
       transferred.push(code)
       // strip the CSS out of the build, otherwise Vite tries to handle it
-      return { code: '' }
+      return { code: '', map: null }
     },
     // put the injectStyle function at the end of the chunk
     // automatically removed when not used
@@ -31,8 +32,9 @@ export default () => {
       // inject CSS into the entry file only
       if (chunk.isEntry) {
         const injections = transferred.map(v => `injectStyle(\`${v}\`)`).join('\n')
-        return { code: code + injections }
+        return { code: code + injections, map: null }
       }
     }
   }
 }
+

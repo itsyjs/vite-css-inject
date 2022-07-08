@@ -1,9 +1,10 @@
 {
   "name": "@itsy/vite-css-inject",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "inject CSS into a Vite build",
   "main": "index.js",
   "type": "module",
+  "types": "types.d.ts",
   "scripts": {},
   "keywords": [
     "vitejs",
